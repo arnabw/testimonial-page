@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Sora", sans-serif;
+}
+body {
+  background-color: #fafaf9;
+  width: 100%;
+  max-width: 1280px;
+  margin: auto;
+  padding: 5rem 1rem;
+}
+ul {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+section {
+  display: grid;
+  gap: 3rem;
+}
+
+.first_one .star {
+  background-color: #f5c044;
+  padding: 1rem;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+
+.first_one h1 {
+  margin-top: 2rem;
+  font-size: 2.25rem;
+  color: #18181b;
+}
+
+.first_one p {
+  font-size: 1rem;
+  color: #52525a;
+  line-height: 1.6;
+  margin: 1rem 0 2rem;
+}
+
+.first_one ul li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #52525a;
+  font-size: 0.875rem;
+  margin-bottom: 0.8rem;
+}
+
+.second_one .google-div,
+.second_one .meta-div {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 350px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
+}
+.second_one .google-div {
+  transform: translateX(70%);
+  margin-bottom: 2rem;
+}
+
+.second_one .google-div .google,
+.second_one .meta-div .meta {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.second_one .google-div ul li:first-child,
+.second_one .meta-div ul li:first-child {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.second_one .google-div ul li:nth-child(2),
+.second_one .meta-div ul li:nth-child(2) {
+  font-size: 0.875rem;
+  color: #52525a;
+}
+
+.second_one .google-div .google img,
+.second_one .meta-div .meta img {
+  max-width: 100px;
+  height: 30px;
+}
+.second_one .google-div .google ul,
+.second_one .meta-div .meta ul {
+  display: flex;
+  gap: 0.3rem;
+}
+
+@media only screen and (min-width: 1025px) {
+  body {
+    padding: 0;
+  }
+  section {
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    height: 100vh;
+  }
+  .second_one .google-div {
+    transform: translateX(50%);
+  }
+}
+@media only screen and (max-width: 600px) {
+  .second_one .google-div {
+    transform: translateX(0);
+  }
+}
